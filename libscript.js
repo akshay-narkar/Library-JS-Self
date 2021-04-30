@@ -8,7 +8,6 @@ let books = []
 function displayForm() {
   if (bookForm.classList.contains('d-none')) {
     bookForm.classList.remove('d-none');
-    // bookForm.addClass = 'd-block';
   } else {
     bookForm.classList.add('d-none');
   }
