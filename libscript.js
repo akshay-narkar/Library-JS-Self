@@ -13,53 +13,58 @@ function displayForm() {
   }
 }
 
-function createBook(book,author,pages,read) {
-  this.book = book;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
-}
+class Createbook {
 
-function addtoArray(e)
-{ 
-  
- e.preventDefault();
-  let book1 = new createBook(book.value,author.value,pages.value,readRadios1.checked)
+          constructor (book,author,pages,read) {
+            this.book = book;
+            this.author = author;
+            this.pages = pages;
+            this.read = read;
+            }
+
+          displaybooks()
+
+          {  const table = document.querySelector('#tbody');
+
+            while(table.lastElementChild)
+            {
+              table.removeChild(table.lastChild);
+            }
+
+            for(let i=0;i<books.length;i+=1)
+            {
+              const read = books[i].read === true ? 'Read' : 'Yet to Read' ;
+              let tablerow = document.createElement('tr');
+              tablerow.setAttribute('id',i);
+              tablerow.innerHTML = `
+                    <td scope="row">${i+1}</td>
+                    <td>${books[i].book}</td>
+                    <td>${books[i].author}</td>
+                    <td>${books[i].pages}</td>
+                    <td><button class="btn btn-success" id="readbook">${read}</button></td>
+                    <td><button class="btn btn-danger" id="remove">Delete</button></td> 
+
+                    `
+              table.appendChild(tablerow);
+            }
+
+          }
+
+          }
+
+
+const addtoArray = (e) => {
+
+  e.preventDefault();
+  let book1 = new Createbook(book.value, author.value, pages.value, readRadios1.checked);
   books.push(book1);
-  for(let i=0;i<forminput.length;i+=1){
-      forminput[i].value='';
-      forminput[i].checked=false;
+  for (let i = 0; i < forminput.length; i += 1) {
+    forminput[i].value = '';
+    forminput[i].checked = false;
   }
-  displaybooks()
+  Createbook.prototype.displaybooks();
 }
 
-function displaybooks()
-
-{  const table = document.querySelector('#tbody');
-
-   while(table.lastElementChild)
-  {
-    table.removeChild(table.lastChild);
-  }
-
-  for(let i=0;i<books.length;i+=1)
-  {
-    const read = books[i].read === true ? 'Read' : 'Yet to Read' ;
-    let tablerow = document.createElement('tr');
-    tablerow.setAttribute('id',i);
-    tablerow.innerHTML = `
-          <td scope="row">${i+1}</td>
-          <td>${books[i].book}</td>
-          <td>${books[i].author}</td>
-          <td>${books[i].pages}</td>
-          <td><button class="btn btn-success" id="readbook">${read}</button></td>
-          <td><button class="btn btn-danger" id="remove">Delete</button></td> 
-
-          `
-    table.appendChild(tablerow);
-  }
-
-}
 
 
 document.querySelector('#tbody').addEventListener('click',(event) => {
@@ -89,7 +94,7 @@ if (event.target.id === 'remove')
 
   // event.target.innerHTML === 'Read' ?  event.target.innerHTML = 'Yet to Read' : event.target.innerHTML = 'Read';
     books.splice([e.parentElement.parentElement.id],1);
-  displaybooks();
+  Createbook.prototype.displaybooks();
 }
 });
 
