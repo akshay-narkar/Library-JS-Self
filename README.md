@@ -29,7 +29,7 @@ To set up a local copy of the project
 
 ## Live Link of the project
 
-[Live](https://raw.githack.com/akshay-narkar/Library-JS-Self/development/index.html)
+[Live](https://raw.githack.com/akshay-narkar/Library-JS-Self/localstorage/index.html)
 
 ## Author
 
