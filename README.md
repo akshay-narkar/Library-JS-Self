@@ -26,6 +26,7 @@ To set up a local copy of the project
 
 - `git clone git@github.com:akshay-narkar/Library-JS-Self.git `
 - `cd Library-JS-Self`
+- `git checkout main`
 
 ## Live Link of the project
 
