@@ -6,7 +6,7 @@ This a project to create a webapp that acts as a personal library to save books 
 
 ## Library screenshot
 
-<img src="assets/screen.png" width="100%"/>
+<img src="screen.png"/>
 
 In this project we build a simple library app with vanilla javascript where you can:
 
@@ -24,12 +24,12 @@ In this project we build a simple library app with vanilla javascript where you 
 
 To set up a local copy of the project
 
-- `git clone
-- `cd Book-Library`
+- `git clone git@github.com:akshay-narkar/Library-JS-Self.git `
+- `cd Library-JS-Self`
 
 ## Live Link of the project
 
--
+[Live](https://raw.githack.com/akshay-narkar/Library-JS-Self/development/index.html)
 
 ## Author
 
