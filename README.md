@@ -33,13 +33,7 @@ To set up a local copy of the project
 
 ## Author
 
-👤 **Ralph Oburu**
-
-- LinkedIn: [Ralph Oburu](https://www.linkedin.com/in/)
-- Github: [Ralph Oburu](https://github.com/)
-- Twitter: [Ralph Oburu](https://twitter.com/)
-
-👤 **Wandji Bertrand**
+👤 **Akshay Narkar**
 
 - Github: [@akshay-narkar](https://github.com/akshay-narkar)
 - Twitter: [Akshay](https://www.twitter.com/akidoit)
